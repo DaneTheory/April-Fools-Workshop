@@ -6,6 +6,7 @@
 // @author       You
 // @match        */*
 // @grant        none
+// @require      http://code.jquery.com/jquery-3.2.1.min.js
 // ==/UserScript==
 
 (function() {
