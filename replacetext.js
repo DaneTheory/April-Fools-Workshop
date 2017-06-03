@@ -1,14 +1,22 @@
 // ==UserScript==
 // @name         Replace Text
-// @namespace    TARGET_WEBSITE
+// @namespace    https://holyokecodes.org
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        TARGET_WEBSITE
+// @match        */*
 // @grant        none
 // ==/UserScript==
 
 (function() {
     'use strict';
-    document.body.innerHTML= document.body.innerHTML.replace("TEXT_TO_REPLACE","TEXT_TO_BE");
+    $('div, p, h1, h2, h3, li, span, a').contents().filter(function() {
+        // Filter text nodes
+        return this.nodeType == 3;
+    }).each(function(){
+        this.textContent = this.textContent.replace(/TEXT_TO_REPLACE/g, 'REPLACEMENT_TEXT');
+        // For example:
+        //this.textContent = this.textContent.replace(/Add to [Cc]art/g, 'Buy for Andrew!');
+        // Or whatever text you want to replace...
+    });
  })();
