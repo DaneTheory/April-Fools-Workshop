@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Replace All Images
-// @namespace    TARGET_WEBSITE
+// @namespace    https://holyokecodes.org
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        TARGET_WEBSITE
+// @match        */*
 // @grant        none
 // ==/UserScript==
 
